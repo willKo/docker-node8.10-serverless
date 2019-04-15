@@ -1,5 +1,5 @@
 FROM amazonlinux:latest
-RUN yum install -y tar java-1.8.0-openjdk \
+RUN yum install -y tar xz java-1.8.0-openjdk \
     git gcc-c++ make openssl-devel wget
 RUN git clone https://github.com/nodejs/node.git
 RUN cd ./node/ &&  ls -l &&  git checkout v8.10.0 &&  git checkout v8.10.0 &&  ./configure &&  make &&  make install
