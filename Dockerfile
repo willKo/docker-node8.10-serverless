@@ -1,4 +1,5 @@
 FROM amazonlinux:latest
+RUN yum install -y groupinstall "Development Tools"
 RUN yum install -y java-1.8.0-openjdk \
     git gcc-c++ make openssl-devel wget
 RUN git clone https://github.com/nodejs/node.git
